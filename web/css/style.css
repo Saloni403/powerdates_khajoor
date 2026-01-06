@@ -1,0 +1,126 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+ul{
+    margin-bottom: 0 !important;
+padding-left: 0 !important;
+}
+li{
+    list-style: none;
+}
+.mainbigheading, h2{
+     font-family: classic roman serif, luxury serif;
+}
+.button{
+    background: #9e6c02;
+    width: fit-content;
+    padding: 0.75rem 2rem;
+    position: relative;
+    z-index: 1;
+}
+.button a{
+    color: beige;
+    text-decoration: none;
+   z-index: 2;
+}
+.button::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  background-color: #2a784a;
+  z-index: -1;
+  transition: all 0.3s ease;
+}
+.button:hover::before{
+width: 100%;
+}
+/* header */
+.toppestnav{
+    background-color: #9e6c02;
+    color: beige;
+}
+.toppestnav ul li{
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+.toppestnav ul li i{
+    font-size: 1.5rem;
+}
+header{
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+nav ul li a{
+    /* font-size: 14px; */
+    font-weight: 600;
+    text-decoration: none;
+    color: #2a784a;
+    font-family: classic roman serif, luxury serif;
+    /* classic Roman serif / luxury serif */
+}
+.iconss ul li i{
+font-size: 1.25rem;
+color: #2a784a;
+}
+/* banner */
+
+.b1{
+    background-image: url(../images/khajoorbanner1.avif);
+}
+.banners{
+    /* height: auto; */
+    /* width: 100%; */
+    padding: 2.5rem 0;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.b1 .bannertext{
+    transform: translateX(-80px);
+    color: #000000;
+}
+@media (min-width:1024px) {
+    .banners{
+height: 60vh;
+        }
+        .b1 .bannertext{
+    transform: translateX(-80%);
+}
+}
+@media (max-width:576px) {
+   
+        .b1 .bannertext{
+  transform: translateX(-1rem);
+}
+}
+
+.addtocart{
+    background-color: #9e6c02;
+    color: beige;
+    padding: 0.5rem 0.65rem;
+    border-radius: 50%;
+}
+.bestseller > div > div:hover{
+  box-shadow: rgba(99, 99, 99, 0.504) 0px 2px 8px 0px;
+}
+
+
+/* FEATUREDdiv */
+@media (min-width:1200px) {
+    .FEATUREDdiv p{
+    width: 50%;
+}
+}
+
+
+/* footer */
+/* footer{
+    background: linear-gradient( #9e6c02, #2a784a);
+} */
