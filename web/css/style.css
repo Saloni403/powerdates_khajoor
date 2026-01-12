@@ -3,6 +3,9 @@
     margin: 0;
     padding: 0;
 }
+.mypointer{
+    cursor: pointer;
+}
 ul{
     margin-bottom: 0 !important;
 padding-left: 0 !important;
@@ -10,7 +13,7 @@ padding-left: 0 !important;
 li{
     list-style: none;
 }
-.mainbigheading, h2{
+.textdesign, h2{
      font-family: classic roman serif, luxury serif;
 }
 .button{
@@ -56,6 +59,11 @@ width: 100%;
 }
 header{
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    position: sticky;
+    top: 0;
+    background-color: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(10px);
+    z-index: 99;
 }
 nav ul li a{
     /* font-size: 14px; */
@@ -63,12 +71,50 @@ nav ul li a{
     text-decoration: none;
     color: #2a784a;
     font-family: classic roman serif, luxury serif;
-    /* classic Roman serif / luxury serif */
+position: relative;
+padding-bottom: 5px;
+}
+nav ul li a::before{
+    content: "";
+    height: 2px;
+    width: 0;
+    background-color: #9e6c02;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transition: all 0.3s; 
+}
+nav ul li a:hover::before{
+width: 100%;
 }
 .iconss ul li i{
 font-size: 1.25rem;
 color: #2a784a;
 }
+
+/* menu */
+.menu{
+    background-color: #000;
+    backdrop-filter: blur(10px);
+    width: 280px;
+    height: 100vh;
+    position: fixed;
+    left: -350px;
+    top: 0;
+    z-index: 99;
+    transition: all 0.3s;
+}
+
+.menu ul li{
+    border-bottom: 2px solid #fff;
+    padding: 1rem;
+    color: #fff;
+    cursor: pointer;
+}
+.menu ul li:hover{
+    background-color: #9e6c02;
+}
+
 /* banner */
 
 .b1{
@@ -107,11 +153,49 @@ height: 60vh;
     padding: 0.5rem 0.65rem;
     border-radius: 50%;
 }
+.bestseller > div > div{
+  border: 1px solid rgb(229, 229, 229);
+}
 .bestseller > div > div:hover{
   box-shadow: rgba(99, 99, 99, 0.504) 0px 2px 8px 0px;
 }
 
+/* small banner  */
+.smallbanner{
+    position: relative;
+}
 
+.smallbanner p{
+font-weight: 500;
+}
+.onsmallbanner{
+    position: absolute;
+top: 0;
+left: 0;
+height: 100%;
+width: 100%;
+display: flex;
+align-items: end;
+justify-content: center;
+flex-direction: column;
+}
+.onsmallbanner > div{
+    text-align: end;
+    transform: translateX(-80px);
+}
+
+@media (min-width:1024px) {
+    
+       .onsmallbanner > div{
+    transform: translateX(-160px);
+}
+}
+@media (max-width:576px) {
+   
+        .onsmallbanner > div{
+  transform: translateX(-1rem);
+}
+}
 /* FEATUREDdiv */
 @media (min-width:1200px) {
     .FEATUREDdiv p{
@@ -121,6 +205,141 @@ height: 60vh;
 
 
 /* footer */
-/* footer{
-    background: linear-gradient( #9e6c02, #2a784a);
-} */
+footer{
+    background-color: #000;
+    color: #fff;
+    padding: 2.5rem 0;
+    line-height: 1.8;
+}
+footer h2{
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    margin-bottom: 2rem;
+}
+footer ul li a{
+    color: #fff;
+    text-decoration: none;
+}
+footer ul li{
+    transition: all 0.3s;
+}
+footer ul li:hover{
+    transform: translateX(5px);
+}
+footer ul li:hover a{
+  color: #9e6c02;
+}
+footer .iconss i{
+ background-color: #9e6d0299;
+ padding: 0.5rem 0.9rem;
+ aspect-ratio: 1 / 1;
+ border-radius: 50%;
+transition: all 0.3s;
+}
+footer .iconss i:hover{
+background-color: #9e6c02;
+}
+
+
+
+
+/* about us page */
+.aboutussection > div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.aboutussection p{
+/* width: 70%; */
+font-size: 20px;
+line-height: 1.8;
+font-weight: lighter;
+color: #333;
+text-align: center;
+}
+@media (max-width:768px) {
+    .aboutussection p{
+        font-size: 16px;
+    }
+}
+
+.object-fit-cover{
+    object-fit: cover;
+}
+
+/* policies */
+.policies-section {
+    background-color: #fafafa;
+}
+
+.policy-card {
+    background: #fff;
+    padding: 30px 25px;
+    border-radius: 12px;
+    /* text-align: center; */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease;
+}
+.policy-card ul{
+margin-bottom: 1rem !important;
+}
+.policy-card ul li{
+    list-style: circle;
+    list-style-position: inside;
+}
+.policy-card i {
+    font-size: 40px;
+    color: #8b5e34; /* luxury brown */
+    margin-bottom: 15px;
+}
+
+.policy-card h4 {
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.policy-card p {
+    font-size: 15px;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.policy-card a {
+    text-decoration: none;
+    color: #8b5e34;
+    font-weight: 500;
+}
+
+.policy-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 35px rgba(0, 0, 0, 0.1);
+}
+
+.policy-card:hover a {
+    text-decoration: underline;
+}
+
+
+
+/* contact form */
+.contact-form input, .contact-form textarea{
+    width: 100%;
+    padding:0.5rem ;
+}
+.contact-form label{
+   font-size: 18px;
+   color: #9e6c02;
+}
+.contact-form input::placeholder, .contact-form textarea::placeholder{
+   color: rgba(102, 102, 102, 0.5);
+}
+.contact-form input:focus, .contact-form textarea:focus{
+   border: 2px solid #9e6c02;
+   outline: none;
+   box-shadow: 0px 2px 6px #9e6c02;
+}
+.contact-form div{
+    margin-bottom: 1rem;
+}
