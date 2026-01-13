@@ -512,7 +512,7 @@ color: #fff;
 
 /* BUTTON */
 .login-btn {
-    background: #000;
+    background: #815902;
     color: #fff;
     padding: 12px;
     border-radius: 30px;
@@ -521,12 +521,12 @@ color: #fff;
 }
 
 .login-btn:hover {
-    background: #222;
+    background: #8b5e34;
     transform: translateY(-2px);
 }
 
 .switch {
-    color: #000;
+    color: #815902;
     font-weight: 600;
 }
 .auth-switch {
