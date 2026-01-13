@@ -14,7 +14,7 @@
 
 <body>
 
-    <!-- header -->
+   <!-- header -->
     <section class="toppestnav py-1 d-none d-sm-block">
         <div class="container">
             <div class="row d-flex align-items-center justify-content-between">
@@ -37,8 +37,8 @@
                 <div class="col-4 d-none d-lg-block">
                     <div>
                         <ul class="d-flex gap-4 justify-content-end">
-                            <li><i class="bi bi-person-circle"></i></li>
-                            <li><i class="bi bi-cart3"></i></li>
+                            <li onclick="location.href='login.html'" class="mypointer"><i class="bi bi-person-circle"></i></li>
+                            <li onclick="location.href='cart.html'" class="mypointer"><i class="bi bi-cart3"></i></li>
                         </ul>
                     </div>
                 </div>
@@ -51,7 +51,7 @@
             <div class="row d-flex align-items-center">
                 <div class="col-4">
                     <div>
-                        <img src="web/images/powerdates.png" width="80" alt="">
+                        <img src="web/images/powerdates.png" width="80" onclick="location.href='index.html'" class="mypointer" alt="">
                     </div>
                 </div>
                 <div class="col-8 d-lg-block d-none">
@@ -68,9 +68,9 @@
                 <div class="col-8 d-lg-none">
                     <div class="iconss">
                         <ul class="d-flex gap-4 justify-content-end">
-                            <li><i class="bi bi-person-circle"></i></li>
-                            <li><i class="bi bi-cart3"></i></li>
-                            <li><i class="bi bi-three-dots-vertical menuopen"></i></li>
+                            <li onclick="location.href='login.html'" class="mypointer"><i class="bi bi-person-circle"></i></li>
+                            <li onclick="location.href='cart.html'" class="mypointer"><i class="bi bi-cart3"></i></li>
+                            <li class="mypointer"><i class="bi bi-three-dots-vertical menuopen"></i></li>
                         </ul>
                     </div>
                 </div>
@@ -86,11 +86,11 @@
                 <i class="bi bi-x-lg mypointer menuclose"></i>
             </div>
             <ul>
-                <li>HOME</li>
-                <li>ABOUT US</li>
-                <li>SHOP</li>
-                <li>CONTACT US</li>
-                <li>DATE VARIETIES</li>
+                <li onclick="location.href='index.html'" class="mypointer">HOME</li>
+                <li onclick="location.href='about.html'" class="mypointer">ABOUT US</li>
+                <li onclick="location.href='shop.html'" class="mypointer">SHOP</li>
+                <li onclick="location.href='contact.html'" class="mypointer">CONTACT US</li>
+                <li onclick="location.href='datevarities.html'" class="mypointer">DATE VARIETIES</li>
             </ul>
         </div>
     </div>
@@ -120,7 +120,7 @@
     <section class="my-5">
         <div class="container">
             <div class="mb-4">
-                <h2>Best-Sellers</h2>
+                <h2>Our Products</h2>
             </div>
             <div class="row gy-4 bestseller">
                 <div class="col-xl-3 col-lg-4 col-sm-6" data-aos="fade-up">
@@ -236,9 +236,7 @@
                     </div>
                 </div>
             </div>
-            <div class="button mt-5">
-                <a href="">Show More <i class="bi bi-arrow-right-short"></i></a>
-            </div>
+          
         </div>
     </section>
 
@@ -259,15 +257,14 @@
                 selection of gourmet dates is the perfect choice.</p>
         </div>
     </div>
-
-    <!-- footer -->
+ <!-- footer -->
     <footer>
         <div class="container">
 
             <div class="row">
                 <div class="col-md-4 col-sm-6">
                     <div style="width: fit-content; text-align: center;">
-                        <img src="web/images/powerdates.png" width="100" alt="">
+                        <img src="web/images/powerdates.png" onclick="location.href='index.html'" class="mypointer" width="100" alt="">
                         <p>Show your love with dates.</p>
                     </div>
                 </div>
@@ -275,11 +272,11 @@
                     <div>
                         <h2>Quick Linkes</h2>
                         <ul>
-                            <li><a href="">Home</a></li>
-                            <li><a href="">About us</a></li>
-                            <li><a href="">Shop</a></li>
-                            <li><a href="">Contact us</a></li>
-                            <li><a href="">Date varieties</a></li>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About us</a></li>
+                            <li><a href="shop.html">Shop</a></li>
+                            <li><a href="contact.html">Contact us</a></li>
+                            <li><a href="datevarities.html">Date varieties</a></li>
                         </ul>
                     </div>
                 </div>
@@ -288,12 +285,11 @@
                     <div class="cntus">
                         <h2>Contact Us</h2>
                         <ul>
-                            <li><a href=""><i class="bi bi-telephone me-2"></i> +91 23423 46545</a></li>
-                            <li><a href=""><i class="bi bi-envelope me-2"></i> info@sillysize.com</a></li>
+                            <li><a href="tel:+911234567876"><i class="bi bi-telephone me-2"></i> +91 23423 46545</a></li>
+                            <li><a href="mailto:info@sillysize.com"><i class="bi bi-envelope me-2"></i> info@sillysize.com</a></li>
                         </ul>
 
                         <div class="iconss d-flex column-gap-3 mt-4">
-
                             <i class="bi bi-facebook"></i>
                             <i class="bi bi-whatsapp"></i>
                             <i class="bi bi-instagram"></i>
@@ -303,6 +299,10 @@
             </div>
         </div>
     </footer>
+
+    <div class="bottomfooter">
+        <a href="https://tssgtech.com/">© 2025 All Rights Reserved | Developed by Tssg-Tech.</a>
+    </div>
     <!-- footer -->
 
     <script src="web/js/script.js"></script>
@@ -312,6 +312,20 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();
+
+         let addtocart = document.querySelectorAll(".addtocart");
+        addtocart.forEach(cart=>{
+            cart.addEventListener("click", (e) => {
+        e.stopPropagation(); 
+        location.href = "cart.html";
+    });
+        })
+         let bestseller = document.querySelectorAll(".bestseller > div > div");
+        bestseller.forEach(prdtcart=>{
+            prdtcart.addEventListener("click",()=>{
+                location.href="product.html";
+            })
+        })
     </script>
 </body>
 

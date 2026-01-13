@@ -294,7 +294,7 @@
                 </div>
             </div>
             <div class="button mt-5">
-                <a href="">Show More <i class="bi bi-arrow-right-short"></i></a>
+                <a href="shop.html">Show More <i class="bi bi-arrow-right-short"></i></a>
             </div>
         </div>
     </section>
@@ -364,7 +364,7 @@
                 </div>
             </div>
             <div class="button mt-5">
-                <a href="">Show More <i class="bi bi-arrow-right-short"></i></a>
+                <a href="shop.html">Show More <i class="bi bi-arrow-right-short"></i></a>
             </div>
         </div>
     </section>
@@ -409,7 +409,7 @@
             <div class="row">
                 <div class="col-md-4 col-sm-6">
                     <div style="width: fit-content; text-align: center;">
-                        <img src="web/images/powerdates.png" width="100" alt="">
+                        <img src="web/images/powerdates.png" onclick="location.href='index.html'" class="mypointer" width="100" alt="">
                         <p>Show your love with dates.</p>
                     </div>
                 </div>
@@ -430,12 +430,11 @@
                     <div class="cntus">
                         <h2>Contact Us</h2>
                         <ul>
-                            <li><a href=""><i class="bi bi-telephone me-2"></i> +91 23423 46545</a></li>
-                            <li><a href=""><i class="bi bi-envelope me-2"></i> info@sillysize.com</a></li>
+                            <li><a href="tel:+911234567876"><i class="bi bi-telephone me-2"></i> +91 23423 46545</a></li>
+                            <li><a href="mailto:info@sillysize.com"><i class="bi bi-envelope me-2"></i> info@sillysize.com</a></li>
                         </ul>
 
                         <div class="iconss d-flex column-gap-3 mt-4">
-
                             <i class="bi bi-facebook"></i>
                             <i class="bi bi-whatsapp"></i>
                             <i class="bi bi-instagram"></i>
@@ -445,7 +444,13 @@
             </div>
         </div>
     </footer>
+
+    <div class="bottomfooter">
+        <a href="https://tssgtech.com/">© 2025 All Rights Reserved | Developed by Tssg-Tech.</a>
+    </div>
     <!-- footer -->
+
+
 
     <script src="web/js/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
@@ -455,10 +460,17 @@
     <script>
         AOS.init();
 
-        let addtocart = document.querySelectorAll("addtocart");
+        let addtocart = document.querySelectorAll(".addtocart");
         addtocart.forEach(cart=>{
-            cart.addEventListener("click",()=>{
-                location.href="cart.html";
+            cart.addEventListener("click", (e) => {
+        e.stopPropagation(); // 🔴 STOP card click
+        location.href = "cart.html";
+    });
+        })
+         let bestseller = document.querySelectorAll(".bestseller > div > div");
+        bestseller.forEach(prdtcart=>{
+            prdtcart.addEventListener("click",()=>{
+                location.href="product.html";
             })
         })
     </script>

@@ -152,9 +152,13 @@ height: 60vh;
     color: beige;
     padding: 0.5rem 0.65rem;
     border-radius: 50%;
+   
+    cursor: pointer;
 }
+
 .bestseller > div > div{
   border: 1px solid rgb(229, 229, 229);
+  cursor: pointer;
 }
 .bestseller > div > div:hover{
   box-shadow: rgba(99, 99, 99, 0.504) 0px 2px 8px 0px;
@@ -239,8 +243,16 @@ transition: all 0.3s;
 footer .iconss i:hover{
 background-color: #9e6c02;
 }
-
-
+.bottomfooter{
+    background-color: #9e6c02;
+    text-align: center;
+    padding: 0.5rem 1rem;
+}
+.bottomfooter a{
+    color: #fff;
+    text-decoration: none;
+    font-weight:500;
+}
 
 
 /* about us page */
@@ -418,9 +430,7 @@ font-size: 1.5rem;
 font-size: 2rem;
 color: #fff;
 }
-.close_login {
-  
-}
+
 /* LEFT IMAGE */
 .login-image {
     background: url("../images/bottombanner.avif") center/cover no-repeat;
