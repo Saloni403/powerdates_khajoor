@@ -138,13 +138,13 @@
     </section> -->
     <!-- banner end -->
     <!-- banner -->
-    <div id="carouselExampleFade" class="carousel slide carousel-fade">
+    <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
                 <div class="banners b1 d-flex align-items-center justify-content-end">
                     <div class="bannertext text-end d-flex align-items-end flex-column">
-                        <h1 class="textdesign">Kunafa Bar1</h1>
-                        <p class="text-end">Tradition perfected <br>
+                        <h1 class="textdesign d-sm-block d-none">Kunafa Bar1</h1>
+                        <p class="text-end d-sm-block d-none">Tradition perfected <br>
                             in every bite.
                         </p>
                         <div class="button">
@@ -156,8 +156,8 @@
             <div class="carousel-item">
                 <div class="banners b1 d-flex align-items-center justify-content-end">
                     <div class="bannertext text-end d-flex align-items-end flex-column">
-                        <h1 class="textdesign">Kunafa Bar2</h1>
-                        <p class="text-end">Tradition perfected <br>
+                        <h1 class="textdesign d-sm-block d-none">Kunafa Bar2</h1>
+                        <p class="text-end d-sm-block d-none">Tradition perfected <br>
                             in every bite.
                         </p>
                         <div class="button">
@@ -169,8 +169,8 @@
             <div class="carousel-item">
                 <div class="banners b1 d-flex align-items-center justify-content-end">
                     <div class="bannertext text-end d-flex align-items-end flex-column">
-                        <h1 class="textdesign">Kunafa Bar3</h1>
-                        <p class="text-end">Tradition perfected <br>
+                        <h1 class="textdesign d-sm-block d-none">Kunafa Bar3</h1>
+                        <p class="text-end d-sm-block d-none">Tradition perfected <br>
                             in every bite.
                         </p>
                         <div class="button">
@@ -180,11 +180,11 @@
                 </div>
             </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+        <button class="carousel-control-prev d-sm-block d-none" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Previous</span>
         </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+        <button class="carousel-control-next d-sm-block d-none" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
         </button>
@@ -385,7 +385,7 @@
                         <p>FEATURED</p>
                         <h2>The Making Of <br>
                             A Bateel Box</h2>
-                        <p>Discover the creative inspiration
+                        <p class="mb-0">Discover the creative inspiration
                             and artisan techniques behind
                             the “perfect treasure chests”</p>
                     </div>
@@ -408,38 +408,39 @@
         <div class="container">
 
             <div class="row">
-                <div class="col-md-4 col-sm-6">
+                <div class="col-md-3 d-flex justify-content-center ">
                     <div style="width: fit-content; text-align: center;">
                         <img src="web/images/powerdates.png" onclick="location.href='index.html'" class="mypointer" width="100" alt="">
-                        <p>Show your love with dates.</p>
+                        <p class="mb-0">Show your love with dates.</p>
                     </div>
                 </div>
-                <div class="col-md-4 col-sm-6">
+                <div class="col-lg-6 col-md-5 mt-md-0 mt-4">
                     <div>
-                        <h2>Quick Linkes</h2>
-                        <ul>
+                        <h2 class="text-center">Quick Linkes</h2>
+                        <ul class="d-flex column-gap-lg-5 column-gap-4 row-gap-3 flex-wrap align-items-center justify-content-center">
                             <li><a href="index.html">Home</a></li>
                             <li><a href="about.html">About us</a></li>
                             <li><a href="shop.html">Shop</a></li>
                             <li><a href="contact.html">Contact us</a></li>
                             <li><a href="datevarities.html">Date varieties</a></li>
                         </ul>
+                         <div class="iconss d-flex gap-5 flex-wrap align-items-center justify-content-center mt-4">
+                            <i class="bi bi-facebook"></i>
+                            <i class="bi bi-whatsapp"></i>
+                            <i class="bi bi-instagram"></i>
+                        </div>
                     </div>
                 </div>
 
-                <div class="col-md-4 col-sm-6">
-                    <div class="cntus">
+                <div class="col-lg-3 col-md-4 mt-md-0 mt-4">
+                    <div class="cntus text-center">
                         <h2>Contact Us</h2>
                         <ul>
                             <li><a href="tel:+911234567876"><i class="bi bi-telephone me-2"></i> +91 23423 46545</a></li>
                             <li><a href="mailto:info@sillysize.com"><i class="bi bi-envelope me-2"></i> info@sillysize.com</a></li>
                         </ul>
 
-                        <div class="iconss d-flex column-gap-3 mt-4">
-                            <i class="bi bi-facebook"></i>
-                            <i class="bi bi-whatsapp"></i>
-                            <i class="bi bi-instagram"></i>
-                        </div>
+                       
                     </div>
                 </div>
             </div>

@@ -121,12 +121,11 @@ color: #2a784a;
     background-image: url(../images/khajoorbanner1.avif);
 }
 .banners{
-    /* height: auto; */
-    /* width: 100%; */
     padding: 2.5rem 0;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    object-fit: cover;
 }
 .b1 .bannertext{
     transform: translateX(-80px);
@@ -144,6 +143,12 @@ height: 60vh;
    
         .b1 .bannertext{
   transform: translateX(-1rem);
+}
+   .banners .button {
+       padding: 0.5rem 1.5rem;
+}
+.banners .button a{
+    font-size: 14px;
 }
 }
 
@@ -178,28 +183,38 @@ top: 0;
 left: 0;
 height: 100%;
 width: 100%;
-display: flex;
-align-items: end;
+/* display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column; */
+}
+.onsmallbanner > div{
+  background-color: #00000023;
+  height: 100%;
+  width: 100%;
+  color: #fff;
+   display: flex;
+align-items: center;
 justify-content: center;
 flex-direction: column;
 }
-.onsmallbanner > div{
+/* .onsmallbanner > div{
     text-align: end;
     transform: translateX(-80px);
-}
+} */
 
-@media (min-width:1024px) {
+/* @media (min-width:1024px) {
     
        .onsmallbanner > div{
     transform: translateX(-160px);
 }
-}
-@media (max-width:576px) {
+} */
+/* @media (max-width:576px) {
    
         .onsmallbanner > div{
   transform: translateX(-1rem);
 }
-}
+} */
 /* FEATUREDdiv */
 @media (min-width:1200px) {
     .FEATUREDdiv p{
