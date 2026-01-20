@@ -245,7 +245,8 @@ function enableEditProfile() {
     </form>
   `;
 }
-
+const dashboardContent = document.getElementById("dashboardContent");
+const defaultDashboardHTML = dashboardContent.innerHTML;
 
 function changeTab(tab, element) {
   document.querySelectorAll(".mainleftdiv li").forEach(li => li.classList.remove("active"));
@@ -254,15 +255,8 @@ function changeTab(tab, element) {
   const content = document.getElementById("dashboardContent");
 
   if (tab === "dashboard") {
-    content.innerHTML = `
-      <h2>Dashboard Overview</h2>
-      <p class="text-muted">Quick access to your account summary.</p>
-      <div class="dashboard-cards">
-        <div class="dash-card"><h4>🛒 Cart</h4><p>2 Items</p></div>
-        <div class="dash-card"><h4>❤️ Wishlist</h4><p>5 Items</p></div>
-        <div class="dash-card"><h4>📦 Orders</h4><p>3 Orders</p></div>
-      </div>
-    `;
+    content.innerHTML = defaultDashboardHTML;
+    return;
   }
 
 

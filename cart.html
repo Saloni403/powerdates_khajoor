@@ -96,53 +96,12 @@
     </div>
 
 <!-- cart page -->
-<style>
-    .cart-section{
-         overflow-x: scroll;
-         scrollbar-width: none;
-    }
-    .wrapper-img img{
-    width: 100px;
-    }
-    table{
-        width: 100%;
-        border: 1px solid rgba(128, 128, 128, 0.5);
-       
-    }
-    .table-row td{
-padding: 1rem 2rem;
-border-bottom: 1px solid rgba(128, 128, 128, 0.5);
-    }
-     .table-row td h6{
-margin-bottom: 0;
-    }
-    .table-top-row{
-        background-color: #ffd374;
-    }
-    .wrapper{
-        display: flex;
-        align-items: center;
-        gap: 1rem;
-    }
-    @media (max-width:768px) {
-         .table-row td{
-padding: 1rem;
-    }
-    }
-    .table-wrapper .quantity{
-border: 1px solid grey;
-display: flex;
-align-items: center;
-justify-content: space-evenly;
-    }
-    .table-wrapper-center {
-        text-align: center;
-    }
-    
-</style>
+
 
 <section class="my-5">
         <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
             <div class="cart-section">
                 <table>
                     <tbody>
@@ -255,6 +214,38 @@ justify-content: space-evenly;
                     </tbody>
                 </table>
             </div>
+</div>
+<div class="col-lg-4">
+            <div class="mt-lg-0 mt-5">
+    <div class="order-summary">
+      <h5 class="mb-3">Order Summary</h5>
+
+      <div class="summary-row">
+        <span>Subtotal</span>
+        <span>₹70.00</span>
+      </div>
+
+      <div class="summary-row">
+        <span>Shipping</span>
+        <span>₹30.00</span>
+      </div>
+
+      <div class="summary-row">
+        <span>Tax</span>
+        <span>₹10.00</span>
+      </div>
+
+      <hr>
+
+      <div class="summary-row total">
+        <span>Total</span>
+        <span>₹110.00</span>
+      </div>
+
+  </div>
+</div>
+</div>
+</div>
             <div class="d-sm-flex gap-5 mt-5">
              <div class="button">
                 <a href="checkout.html">Proceed to Checkout <i class="bi bi-arrow-right-short"></i></a>
