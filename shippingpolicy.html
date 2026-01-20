@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>PowerDates | Profile</title>
+     <title>PowerDates | Shipping Policy</title>
     <link type="image/png" rel="icon" href="web/images/powerdates.png" >
     <link rel="stylesheet" href="web/css/style.css">
-       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
-    
- <!-- header -->
+   
+    <!-- header -->
     <section class="toppestnav py-1 d-none d-sm-block">
         <div class="container">
             <div class="row d-flex align-items-center justify-content-between">
@@ -92,59 +92,45 @@
                 <li onclick="location.href='datevarities.html'" class="mypointer">DATE VARIETIES</li>
             </ul>
         </div>
-    </div>
+    </div> 
 
-<!-- DASHBOARD -->
-<section class="user-dashboard">
-  <div class="dashboard-container">
+ <!-- policies section -->
+    <section class="policies-section py-5">
+        <div class="container">
 
-    <!-- LEFT SIDEBAR -->
-    <div class="mainleftdiv">
-      <!-- <div class="arrowicon">
-        <i class="bi bi-arrow-left"></i>
-      </div> -->
+            <div class="row g-4 d-flex align-items-center justify-content-center">
 
-      <ul>
-        <li class="active" onclick="changeTab('dashboard', this)">DASHBOARD</li>
-        <li onclick="location.href='index.html'">HOME</li>
-        <li onclick="changeTab('orders', this)">ORDER HISTORY</li>
-        <li onclick="changeTab('profile', this)">PROFILE</li>
-      </ul>
-    </div>
+                <!-- Shipping Policy -->
+                <div class="col-xl-6" data-aos="fade-up">
+                    <div class="policy-card h-100">
+                        <i class="bi bi-truck"></i>
+                        <h4>Shipping & Delivery Policy</h4>
+                        <p>
+                          We ensure safe and timely delivery of our premium khajoor products.
+                        </p>
+                        <ul>
+                        <h5>Shipping Locations</h5>
+                        <li>We currently deliver across India</li>
+                       </ul>
+                       <ul>
+                        <h5>Delivery Timeline</h5>
+                        <li>Orders are delivered within 3–7 business days</li>
+                        <li>Delivery time may vary due to location, weather, or festive seasons</li>
+                       </ul>
+                       <h5>Delivery Partners</h5>
+                       <p>We work with trusted courier partners to ensure secure delivery.</p>
+                    </div>
+                </div>
 
-    <!-- RIGHT CONTENT -->
-    <div class="mainrightdiv">
-      <div id="dashboardContent">
+              
 
-        <!-- Default Content -->
-        <h2>Welcome Back 👋</h2>
-        <p class="text-muted">
-          Manage your orders, profile and account settings here.
-        </p>
-
-        <div class="dashboard-cards">
-          <div class="dash-card">
-            <h4>🛒 Cart Items</h4>
-            <p>2 Products</p>
-          </div>
-          <div class="dash-card">
-            <h4>❤️ Wishlist</h4>
-            <p>5 Products</p>
-          </div>
-          <div class="dash-card">
-            <h4>📦 Orders</h4>
-            <p>3 Orders</p>
-          </div>
+            </div>
         </div>
-
-      </div>
-    </div>
-
-  </div>
-</section>
+    </section>
 
 
- <!-- footer -->
+
+     <!-- footer -->
     <footer>
         <div class="container">
 
@@ -208,107 +194,5 @@
     <script>
         AOS.init();
     </script>
-    <script>
-function enableEditProfile() {
-  const content = document.getElementById("dashboardContent");
-
-  content.innerHTML = `
-    <h2>Edit Profile</h2>
-
-    <form class="row g-3 mt-3">
-      <div class="col-md-6">
-        <label class="form-label">Full Name</label>
-        <input class="form-control" value="Saloni Bansal">
-      </div>
-
-      <div class="col-md-6">
-        <label class="form-label">Email</label>
-        <input class="form-control" value="saloni@example.com">
-      </div>
-
-      <div class="col-md-6">
-        <label class="form-label">Phone</label>
-        <input class="form-control" value="+91 98765 43210">
-      </div>
-
-      <div class="col-md-6">
-        <label class="form-label">Password</label>
-        <input type="password" class="form-control" placeholder="••••••••">
-      </div>
-
-      <div class="col-12 d-flex gap-3">
-        <button class="btn btn-dark">Save Changes</button>
-        <button type="button" class="btn btn-outline-secondary" onclick="changeTab('profile', document.querySelector('.mainleftdiv li.active'))">
-          Cancel
-        </button>
-      </div>
-    </form>
-  `;
-}
-
-
-function changeTab(tab, element) {
-  document.querySelectorAll(".mainleftdiv li").forEach(li => li.classList.remove("active"));
-  element.classList.add("active");
-
-  const content = document.getElementById("dashboardContent");
-
-  if (tab === "dashboard") {
-    content.innerHTML = `
-      <h2>Dashboard Overview</h2>
-      <p class="text-muted">Quick access to your account summary.</p>
-      <div class="dashboard-cards">
-        <div class="dash-card"><h4>🛒 Cart</h4><p>2 Items</p></div>
-        <div class="dash-card"><h4>❤️ Wishlist</h4><p>5 Items</p></div>
-        <div class="dash-card"><h4>📦 Orders</h4><p>3 Orders</p></div>
-      </div>
-    `;
-  }
-
-
-  if (tab === "orders") {
-    content.innerHTML = `
-      <h2>Order History</h2>
-      <table class="table mt-3">
-        <tr><th>Order ID</th><th>Status</th><th>Total</th></tr>
-        <tr><td>#SS101</td><td>Delivered</td><td>₹2,499</td></tr>
-        <tr><td>#SS102</td><td>Processing</td><td>₹1,299</td></tr>
-      </table>
-    `;
-  }
-
-  if (tab === "profile") {
-  content.innerHTML = `
-    <h2>My Profile</h2>
-    <p class="text-muted">Personal information associated with your account</p>
-
-    <div class="profile-card mt-4">
-      <div class="row">
-
-        <div class="col-lg-3">
-          <img src="web/images/profile.jpg" class="profile-img" alt="User">
-        </div>
-
-        <div class="col-lg-9 mt-lg-0 mt-3">
-          <div class="profile-info">
-            <p><strong>Name:</strong> Saloni Bansal</p>
-            <p><strong>Email:</strong> saloni@example.com</p>
-            <p><strong>Phone:</strong> +91 98765 43210</p>
-            <p><strong>Member Since:</strong> January 2026</p>
-          </div>
-
-          <button class="btn btn-outline-dark mt-3" onclick="enableEditProfile()">
-            Edit Profile
-          </button>
-        </div>
-
-      </div>
-    </div>
-  `;
-}
-
-}
-</script>
-
 </body>
 </html>

@@ -118,7 +118,13 @@ color: #2a784a;
 /* banner */
 
 .b1{
-    background-image: url(../images/khajoorbanner1.avif);
+    background-image: url(../images/mykhajoorbanner\ \(1\).png);
+}
+.b2{
+    background-image: url(../images/mykhajoorbanner\ \(2\).png);
+}
+.b3{
+    background-image: url(../images/mykhajoorbanner\ \(3\).png);
 }
 .banners{
     padding: 2.5rem 0;
@@ -127,23 +133,23 @@ color: #2a784a;
     background-size: cover;
     object-fit: cover;
 }
-.b1 .bannertext{
-    transform: translateX(-80px);
-    color: #000000;
+.banners .bannertext{
+    /* transform: translateX(-80px); */
+    color: #fff;
 }
 @media (min-width:1024px) {
     .banners{
 height: 60vh;
         }
-        .b1 .bannertext{
+        /* .b1 .bannertext{
     transform: translateX(-80%);
-}
+} */
 }
 @media (max-width:576px) {
    
-        .b1 .bannertext{
+        /* .b1 .bannertext{
   transform: translateX(-1rem);
-}
+} */
    .banners .button {
        padding: 0.5rem 1.5rem;
 }
@@ -167,6 +173,10 @@ height: 60vh;
 }
 .bestseller > div > div:hover{
   box-shadow: rgba(99, 99, 99, 0.504) 0px 2px 8px 0px;
+}
+
+.bestseller > div > div h6{
+ 
 }
 
 /* small banner  */
